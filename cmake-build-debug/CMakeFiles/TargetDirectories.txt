@@ -1,0 +1,3 @@
+/Users/kailinx/Desktop/Matrix-Multiplication-OpenMP/cmake-build-debug/CMakeFiles/Matrix_Multiplication_OpenMP.dir
+/Users/kailinx/Desktop/Matrix-Multiplication-OpenMP/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kailinx/Desktop/Matrix-Multiplication-OpenMP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
