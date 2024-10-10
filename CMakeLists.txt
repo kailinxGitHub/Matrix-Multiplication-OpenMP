@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.29)
-project(Matrix_Multiplication_OpenMP)
+set(CMAKE_C_COMPILER "/opt/homebrew/opt/llvm/bin/clang")
+set(CMAKE_CXX_COMPILER "/opt/homebrew/opt/llvm/bin/clang++")
 
-set(CMAKE_CXX_STANDARD 14)
+project(Matrix_Multiplication_OpenMP C)
 
-set(CMAKE_C_COMPILER "/opt/homebrew/bin/gcc-14")
-set(CMAKE_CXX_COMPILER "/opt/homebrew/bin/g++-14")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Xclang -fopenmp -L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/libomp/include -lomp")
 
-add_executable(Matrix_Multiplication_OpenMP
-        main.cpp)
+add_executable(Matrix_Multiplication_OpenMP main.c)
