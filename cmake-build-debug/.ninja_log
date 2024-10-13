@@ -1,3 +1,5 @@
 # ninja log v6
 0	186	1728534880672031919	CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o	42bfb1950c557219
 187	229	1728534880858515851	Matrix_Multiplication_OpenMP	5c17a1df080e80c7
+1	171	1728780017964720775	CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o	42bfb1950c557219
+171	278	1728780018134689716	Matrix_Multiplication_OpenMP	5c17a1df080e80c7
