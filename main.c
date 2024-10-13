@@ -45,7 +45,7 @@ void PrintMatrix(
  * @param matrix_two the second matrix to be multiplied
  * @param result_matrix the result of the two matrices
  */
-void StandardMatrixMultiplication(
+double StandardMatrixMultiplication(
         int matrix_one[dim][dim],
         int matrix_two[dim][dim],
         int result_matrix[dim][dim]
@@ -65,6 +65,7 @@ void StandardMatrixMultiplication(
     end = omp_get_wtime();
     double time_taken = end - start;
     printf("Standard Matrix Multiplication took %.10f Seconds\n", time_taken);
+    return time_taken;
 }
 
 /**
@@ -73,7 +74,7 @@ void StandardMatrixMultiplication(
  * @param matrix_two the second matrix to be multiplied
  * @param result_matrix the result of the two matrices
  */
-void OmpMatrixMultiplication(
+double OmpMatrixMultiplication(
         int matrix_one[dim][dim],
         int matrix_two[dim][dim],
         int result_matrix[dim][dim]
@@ -94,6 +95,7 @@ void OmpMatrixMultiplication(
     end = omp_get_wtime();
     double time_taken = end - start;
     printf("OpenMP Matrix Multiplication took %.10f Seconds\n", time_taken);
+    return time_taken;
 }
 
 int main() {
@@ -105,14 +107,16 @@ int main() {
 
     RandomIntGeneratorForMatrix(1,100,matrix_one);
     RandomIntGeneratorForMatrix(1,100,matrix_two);
-    StandardMatrixMultiplication(matrix_one, matrix_two, result_matrix);
+    double smm = StandardMatrixMultiplication(matrix_one, matrix_two, result_matrix);
 //    PrintMatrix(matrix_one);
 //    PrintMatrix(matrix_two);
 //    PrintMatrix(result_matrix);
     printf("---\n");
-    OmpMatrixMultiplication(matrix_one, matrix_two, result_matrix);
+    double omm = OmpMatrixMultiplication(matrix_one, matrix_two, result_matrix);
 //    PrintMatrix(matrix_one);
 //    PrintMatrix(matrix_two);
 //    PrintMatrix(result_matrix);
+    printf("---\n");
+    printf("Time difference between Standard and OpenMP matrix multiplication: %f times faster.", (double)(smm / omm));
     return 0;
 }
