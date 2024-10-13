@@ -2,7 +2,7 @@
 #include <omp.h>
 #include <time.h>
 
-#define POWER 1
+#define POWER 9
 const int dim = (1 << POWER);
 
 /**
@@ -43,29 +43,57 @@ void PrintMatrix(
  * The standard multiplication without omp.
  * @param matrix_one the first matrix to be multiplied
  * @param matrix_two the second matrix to be multiplied
- * @param result the result of the two matrices
+ * @param result_matrix the result of the two matrices
  */
 void StandardMatrixMultiplication(
         int matrix_one[dim][dim],
         int matrix_two[dim][dim],
-        int result[dim][dim]
+        int result_matrix[dim][dim]
         ) {
     double start, end;
 
-    start = clock();
-    for (int i = 0; i < dim; i++) {
-        for (int j = 0; j < dim; j++) {
+    start = omp_get_wtime();
+    for (int row = 0; row < dim; row++) {
+        for (int col = 0; col < dim; col++) {
             int sum = 0;
-            for (int k = 0; k < dim; k++) {
-                sum += matrix_one[i][k] * matrix_two[k][j];
+            for (int current_row_or_col = 0; current_row_or_col < dim; current_row_or_col++) {
+                sum += matrix_one[row][current_row_or_col] * matrix_two[current_row_or_col][col];
             }
-            result[i][j] = sum;
+            result_matrix[row][col] = sum;
         }
     }
-    end = clock();
-    double time_taken = (double)(end - start) / (double)(CLOCKS_PER_SEC);
+    end = omp_get_wtime();
+    double time_taken = end - start;
     printf("Standard Matrix Multiplication took %.10f Seconds\n", time_taken);
+}
 
+/**
+ * Function for matrix multiplication using openmp.
+ * @param matrix_one the first matrix to be multiplied
+ * @param matrix_two the second matrix to be multiplied
+ * @param result_matrix the result of the two matrices
+ */
+void OmpMatrixMultiplication(
+        int matrix_one[dim][dim],
+        int matrix_two[dim][dim],
+        int result_matrix[dim][dim]
+        ) {
+    double start, end;
+
+    start = omp_get_wtime();
+    #pragma omp parallel for num_threads(10) schedule(static) shared(matrix_one, matrix_two, result_matrix)
+    for (int row = 0; row < dim; row++) {
+        for (int col = 0; col < dim; col++) {
+            int sum = 0;
+            for (int current_row_or_col = 0; current_row_or_col < dim; current_row_or_col++) {
+                sum += matrix_one[row][current_row_or_col] * matrix_two[current_row_or_col][col];
+            }
+            result_matrix[row][col] = sum;
+        }
+    }
+    end = omp_get_wtime();
+    double time_taken = end - start;
+    printf("OpenMP Matrix Multiplication took %.10f Seconds\n", time_taken);
 }
 
 int main() {
@@ -78,8 +106,13 @@ int main() {
     RandomIntGeneratorForMatrix(1,100,matrix_one);
     RandomIntGeneratorForMatrix(1,100,matrix_two);
     StandardMatrixMultiplication(matrix_one, matrix_two, result_matrix);
-    PrintMatrix(matrix_one);
-    PrintMatrix(matrix_two);
-    PrintMatrix(result_matrix);
+//    PrintMatrix(matrix_one);
+//    PrintMatrix(matrix_two);
+//    PrintMatrix(result_matrix);
+    printf("---\n");
+    OmpMatrixMultiplication(matrix_one, matrix_two, result_matrix);
+//    PrintMatrix(matrix_one);
+//    PrintMatrix(matrix_two);
+//    PrintMatrix(result_matrix);
     return 0;
 }
