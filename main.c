@@ -44,6 +44,7 @@ void PrintMatrix(
  * @param matrix_one the first matrix to be multiplied
  * @param matrix_two the second matrix to be multiplied
  * @param result_matrix the result of the two matrices
+ * @return time taken
  */
 double StandardMatrixMultiplication(
         int matrix_one[dim][dim],
@@ -73,6 +74,7 @@ double StandardMatrixMultiplication(
  * @param matrix_one the first matrix to be multiplied
  * @param matrix_two the second matrix to be multiplied
  * @param result_matrix the result of the two matrices
+ * @return time taken
  */
 double OmpMatrixMultiplication(
         int matrix_one[dim][dim],
@@ -95,6 +97,37 @@ double OmpMatrixMultiplication(
     end = omp_get_wtime();
     double time_taken = end - start;
     printf("OpenMP Matrix Multiplication took %.10f Seconds\n", time_taken);
+    return time_taken;
+}
+
+/**
+ * Function that uses loop tiling for the standard matrix multiplication.
+ * @param matrix_one the first matrix to be multiplied
+ * @param matrix_two the second matrix to be multiplied
+ * @param result_matrix the result of the two matrices
+ * @return time taken
+ */
+double StandardTilingMatrixMultiplication(
+        int matrix_one[dim][dim],
+        int matrix_two[dim][dim],
+        int result_matrix[dim][dim]
+) {
+    double start, end;
+    int tile_size = 2;
+
+    start = omp_get_wtime();
+    for (int row = 0; row < dim; row++) {
+        for (int col = 0; col < dim; col++) {
+            int sum = 0;
+            for (int current_row_or_col = 0; current_row_or_col < dim; current_row_or_col++) {
+                sum += matrix_one[row][current_row_or_col] * matrix_two[current_row_or_col][col];
+            }
+            result_matrix[row][col] = sum;
+        }
+    }
+    end = omp_get_wtime();
+    double time_taken = end - start;
+    printf("Standard Matrix Multiplication took %.10f Seconds\n", time_taken);
     return time_taken;
 }
 

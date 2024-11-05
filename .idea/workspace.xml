@@ -24,11 +24,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88744ea6-5537-49d7-acf7-ddb54eed3fbd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/hello_world.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-dfcd40d578d57be23b37.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-13T02-39-19-0010.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Matrix_Multiplication_OpenMP-Debug-273339ade2d41fe58044.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Matrix_Multiplication_OpenMP" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Matrix_Multiplication_OpenMP" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,15 +85,15 @@
   }
 }</component>
   <component name="RunManager" selected="CMake Application.Matrix_Multiplication_OpenMP">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Matrix_Multiplication_OpenMP" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
     </configuration>
     <configuration name="Matrix_Multiplication_OpenMP" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Matrix_Multiplication_OpenMP" TARGET_NAME="Matrix_Multiplication_OpenMP" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Matrix_Multiplication_OpenMP" RUN_TARGET_NAME="Matrix_Multiplication_OpenMP">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -114,7 +120,8 @@
       <workItem from="1727903120309" duration="24000" />
       <workItem from="1728534637599" duration="270000" />
       <workItem from="1728779994566" duration="15000" />
-      <workItem from="1728780014939" duration="6604000" />
+      <workItem from="1728780014939" duration="8271000" />
+      <workItem from="1730841259999" duration="148000" />
     </task>
     <servers />
   </component>

@@ -51,7 +51,13 @@ build cmake_object_order_depends_target_Matrix_Multiplication_OpenMP: phony || .
 
 build CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o: C_COMPILER__Matrix_Multiplication_OpenMP_unscanned_Debug /Users/kailinx/Desktop/Matrix-Multiplication-OpenMP/main.c || cmake_object_order_depends_target_Matrix_Multiplication_OpenMP
   DEP_FILE = CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o.d
-  FLAGS = -Xclang -fopenmp -L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/libomp/include -lomp -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  FLAGS = -Xclang -fopenmp -L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/libomp/include -lomp -g -arch arm64 -mmacosx-version-min=14.6 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Matrix_Multiplication_OpenMP.dir
+  OBJECT_FILE_DIR = CMakeFiles/Matrix_Multiplication_OpenMP.dir
+
+build CMakeFiles/Matrix_Multiplication_OpenMP.dir/hello_world.c.o: C_COMPILER__Matrix_Multiplication_OpenMP_unscanned_Debug /Users/kailinx/Desktop/Matrix-Multiplication-OpenMP/hello_world.c || cmake_object_order_depends_target_Matrix_Multiplication_OpenMP
+  DEP_FILE = CMakeFiles/Matrix_Multiplication_OpenMP.dir/hello_world.c.o.d
+  FLAGS = -Xclang -fopenmp -L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/libomp/include -lomp -g -arch arm64 -mmacosx-version-min=14.6 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/Matrix_Multiplication_OpenMP.dir
   OBJECT_FILE_DIR = CMakeFiles/Matrix_Multiplication_OpenMP.dir
 
@@ -63,8 +69,8 @@ build CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o: C_COMPILER__Matrix_M
 #############################################
 # Link the executable Matrix_Multiplication_OpenMP
 
-build Matrix_Multiplication_OpenMP: C_EXECUTABLE_LINKER__Matrix_Multiplication_OpenMP_Debug CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o
-  FLAGS = -Xclang -fopenmp -L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/libomp/include -lomp -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6
+build Matrix_Multiplication_OpenMP: C_EXECUTABLE_LINKER__Matrix_Multiplication_OpenMP_Debug CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o CMakeFiles/Matrix_Multiplication_OpenMP.dir/hello_world.c.o
+  FLAGS = -Xclang -fopenmp -L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/libomp/include -lomp -g -arch arm64 -mmacosx-version-min=14.6
   OBJECT_DIR = CMakeFiles/Matrix_Multiplication_OpenMP.dir
   POST_BUILD = :
   PRE_LINK = :
