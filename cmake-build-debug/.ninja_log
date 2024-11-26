@@ -1,5 +1,13 @@
 # ninja log v6
-5	168	1728782760837745232	CMakeFiles/Matrix_Multiplication_OpenMP.dir/test.c.o	cb68997b2d5341ce
-46	78	1728789005645018960	Matrix_Multiplication_OpenMP	5c17a1df080e80c7
-2	46	1728789005600350492	CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o	42bfb1950c557219
-1	50	1730841285004583328	build.ninja	d6469726b30b63e
+0	47	1732050952683174095	CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o	f959085f893d7af4
+47	93	1732050952730478472	Matrix_Multiplication_OpenMP	8961bda0a3a74b92
+12	239	1732609313618751551	CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o	f959085f893d7af4
+239	381	1732609313844873404	Matrix_Multiplication_OpenMP	8961bda0a3a74b92
+3	91	1732609417437071824	CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o	f959085f893d7af4
+91	200	1732609417524992021	Matrix_Multiplication_OpenMP	8961bda0a3a74b92
+2	56	1732609440519279017	CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o	f959085f893d7af4
+56	102	1732609440573690784	Matrix_Multiplication_OpenMP	8961bda0a3a74b92
+1	56	1732609456762794923	CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o	f959085f893d7af4
+56	97	1732609456817787937	Matrix_Multiplication_OpenMP	8961bda0a3a74b92
+7	67	1732609467859678998	CMakeFiles/Matrix_Multiplication_OpenMP.dir/main.c.o	f959085f893d7af4
+67	114	1732609467919419359	Matrix_Multiplication_OpenMP	8961bda0a3a74b92

@@ -7,10 +7,6 @@
 				{
 					"build" : ".",
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.29"
-					},
 					"projectIndex" : 0,
 					"source" : ".",
 					"targetIndexes" : 
@@ -39,7 +35,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Matrix_Multiplication_OpenMP::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Matrix_Multiplication_OpenMP-Debug-49bec4c4812121fea6da.json",
+					"jsonFile" : "target-Matrix_Multiplication_OpenMP-Debug-426a1533168f82d85203.json",
 					"name" : "Matrix_Multiplication_OpenMP",
 					"projectIndex" : 0
 				}
